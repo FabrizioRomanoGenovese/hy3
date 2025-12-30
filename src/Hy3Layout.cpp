@@ -598,13 +598,13 @@ std::any Hy3Layout::layoutMessage(SLayoutMessageHeader header, std::string conte
 }
 
 SWindowRenderLayoutHints Hy3Layout::requestRenderHints(PHLWINDOW window) {
-	if (this->shouldRenderSelected(window.get())) {
-    static auto active_color = CConfigValue<Hyprlang::CUSTOMTYPE>("general:col.active_border");
-		return {
-			.isBorderGradient = true,
-			.borderGradient = static_cast<CGradientValueData*>((active_color.ptr())->getData()),
-		};
-	}
+	// if (this->shouldRenderSelected(window.get())) {
+ //    static auto active_color = CConfigValue<Hyprlang::CUSTOMTYPE>("general:col.active_border");
+	// 	return {
+	// 		.isBorderGradient = true,
+	// 		.borderGradient = static_cast<CGradientValueData*>((active_color.ptr())->getData()),
+	// 	};
+	// }
 
 	return {};
 }
