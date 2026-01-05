@@ -1660,6 +1660,10 @@ void Hy3Layout::windowGroupUpdateRecursiveHook(void*, SCallbackInfo&, std::any d
 
 	if (node == nullptr) return;
 	node->updateTabBarRecursive();
+
+	if (window->m_workspace != nullptr) {
+		g_pHyprRenderer->damageMonitor(window->m_workspace->m_monitor.lock());
+	}
 }
 
 void Hy3Layout::tickHook(void*, SCallbackInfo&, std::any) {
