@@ -1,5 +1,9 @@
 # Changelog
 
+# hl0.53.0 and before
+
+- Fixed tab bar not being damaged (glitching) on window title change.
+
 # hl0.52.0 and before
 
 - Added `active_alt_monitor` tab bar color options.
